@@ -16,5 +16,5 @@ For more details see google colab notebooks:
  
 
 A demonstration video is provided here:
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/o1NrriUopPc)
+[![IMAGE ALT TEXT HERE](https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=de&gl=US)](https://youtu.be/o1NrriUopPc)
 
