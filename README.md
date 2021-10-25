@@ -18,3 +18,6 @@ Link to the paper: ...
 A demonstration video is provided here:
 [![CAFI-Content-Aware Image Interpolation](Youtube_capture.JPG)](https://youtu.be/4eCELi-b23k "CAFI-Content-Aware Image Interpolation")
 
+Microscopy training and test data is available here:
+https://zenodo.org/record/3713326#.YXak9xpBwdV
+
