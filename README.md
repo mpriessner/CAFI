@@ -16,5 +16,5 @@ For more details see google colab notebooks:
  
 
 A demonstration video is provided here:
-[![CAFI-Content-Aware Image Interpolation](Youtube_capture.JPG)](https://youtu.be/o1NrriUopPc "CAFI-Content-Aware Image Interpolation")
+[![CAFI-Content-Aware Image Interpolation](Youtube_capture.JPG)](https://youtu.be/4eCELi-b23k "CAFI-Content-Aware Image Interpolation")
 
