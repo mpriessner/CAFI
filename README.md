@@ -16,9 +16,5 @@ For more details see google colab notebooks:
  
 
 A demonstration video is provided here:
-[![IMAGE ALT TEXT HERE](https://play-lh.googleusercontent.com/vA4tG0v4aasE7oIvRIvTkOYTwom07DfqHdUPr6k7jmrDwy_qA_SonqZkw6KX0OXKAdk)](https://youtu.be/o1NrriUopPc)
-
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
-
-[![CAFI-Content-Aware Image Interpolation](https://yt-embed.herokuapp.com/embed?v=StTqXEQ2l-Y)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "CAFI-Content-Aware Image Interpolation")
+[![CAFI-Content-Aware Image Interpolation](https://drive.google.com/file/d/1ppw-8oERkfcB0rS0gAhG9JOPGYe_A9pu/view?usp=sharing)](https://youtu.be/o1NrriUopPc "CAFI-Content-Aware Image Interpolation")
 
