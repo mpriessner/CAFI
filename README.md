@@ -14,9 +14,7 @@ For more details see google colab notebooks:
  ZoomingSlowMo 4 Microscopy
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TZ0K-rq9Nrgu9_XZ0UOK6brxjIM0ISNU?usp=sharing)
  
- 
 
 A demonstration video is provided here:
-https://youtu.be/o1NrriUopPc
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/o1NrriUopPc)
 
-Combined Repos from DAIN and Zooming SlowMo
