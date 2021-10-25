@@ -5,7 +5,7 @@ Here I provide the modifide repositories of DAIN and Zooming SlowMo used in the 
 These notebooks allow the user to interpolate images between two consecutive images of a microscopy image sequence effectively increasing the temporal sampling of your dataset.
 
 For more details see google colab notebooks:
-
+Link to the paper: ...
 
  DAIN 4 Microscopy:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing)
