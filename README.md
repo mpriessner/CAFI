@@ -1,6 +1,6 @@
 # Content-aware frame interpolation (CAFI): Deep Learning-based temporal super-resolution for fast bioimaging
 
-Here I provide the modifide repositories of DAIN and Zooming SlowMo used in the CAFI 4 Microscopy Google Colab notebooks.
+Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the CAFI 4 Microscopy Google Colab notebooks.
 
 These notebooks allow the user to interpolate images between two consecutive images of a microscopy image sequence effectively increasing the temporal sampling of your dataset.
 
