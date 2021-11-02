@@ -20,15 +20,15 @@ For more details see google colab notebooks:
 
  DAIN 4 Microscopy:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing)
- [Original Github of DAIN](https://github.com/baowenbo/DAIN) 
+ [Original Github of DAIN](https://github.com/baowenbo/DAIN) | 
  [Source Paper 1](https://arxiv.org/abs/1904.00830)
 
  
  ZoomingSlowMo 4 Microscopy
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TZ0K-rq9Nrgu9_XZ0UOK6brxjIM0ISNU?usp=sharing)
- [Original Github of ZS](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) 
- [Source Paper 1](https://arxiv.org/abs/2002.11616#)
- [Source Paper 1](https://arxiv.org/abs/2104.07473#)
+ [Original Github of ZS](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) | 
+ [Source Paper 1](https://arxiv.org/abs/2002.11616#) | 
+ [Source Paper 2](https://arxiv.org/abs/2104.07473#) 
 
 Microscopy training and test data is available here:
 [Original Github of ZS](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
