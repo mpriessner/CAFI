@@ -25,15 +25,8 @@ Microscopy training and test data is available here:
 https://zenodo.org/record/5596603#.YX-bKGDMIdU
 
 <table>
-  <thead>
-    <tr>
-      <td>Input&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td>Output</td>
-    </tr>
-  </thead>
   <tr>
     <td colspan="1">
-      <a href="https://youtu.be/8mgD8JxBOus">
         <img src="dump/TWEET_2_GIF_1_Paper_Screenshots.gif" alt="Demo GIF">
         </img>
       </a>
