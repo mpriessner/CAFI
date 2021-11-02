@@ -31,7 +31,7 @@ For more details see google colab notebooks:
  [Source Paper 2](https://arxiv.org/abs/2104.07473#) 
 
 Microscopy training and test data is available here:
-[Original Github of ZS](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
+[Zenodo Link](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
 
 A demonstration video is provided here: [CAFI-Content-Aware Image Interpolation](https://youtu.be/4eCELi-b23k "CAFI-Content-Aware Image Interpolation")
 
