@@ -6,7 +6,6 @@ These notebooks allow the user to interpolate images between two consecutive ima
 
 For more details see google colab notebooks:
 
-
 <table>
   <tr>
     <td colspan="1">
@@ -19,7 +18,7 @@ For more details see google colab notebooks:
 
 
  DAIN 4 Microscopy:
- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing)
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing) | 
  [User Tutorial for DAIN4Mic](https://www.youtube.com/watch?v=5JF7y-cjmNc)
  
  [Original Github of DAIN](https://github.com/baowenbo/DAIN) | 
@@ -27,7 +26,7 @@ For more details see google colab notebooks:
 
  
  ZoomingSlowMo 4 Microscopy
- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TZ0K-rq9Nrgu9_XZ0UOK6brxjIM0ISNU?usp=sharing) 
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TZ0K-rq9Nrgu9_XZ0UOK6brxjIM0ISNU?usp=sharing) | 
  [User Tutorial for ZoomingSlowMo4Mic](https://www.youtube.com/watch?v=yh6VH5_vN_Q)
 
  [Original Github of ZS](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) | 
