@@ -5,7 +5,7 @@ Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the
 These notebooks allow the user to interpolate images between two consecutive images of a microscopy image sequence effectively increasing the temporal sampling of your dataset.
 
 For more details see google colab notebooks:
-Link to the paper: ...
+
 
 <table>
   <tr>
@@ -16,6 +16,7 @@ Link to the paper: ...
     </td>
   </tr>
 </table>
+
 
  DAIN 4 Microscopy:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing)
@@ -32,11 +33,9 @@ Link to the paper: ...
 Microscopy training and test data is available here:
 [Original Github of ZS](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
 
-A demonstration video is provided here:
-[![CAFI-Content-Aware Image Interpolation](dump/Youtube_capture.jpg)](https://youtu.be/4eCELi-b23k "CAFI-Content-Aware Image Interpolation")
+A demonstration video is provided here: [CAFI-Content-Aware Image Interpolation](https://youtu.be/4eCELi-b23k "CAFI-Content-Aware Image Interpolation")
 
-
-
+Link to the paper: WILL BE ADDED SOON
 <table>
   <tr>
     <td colspan="1">
