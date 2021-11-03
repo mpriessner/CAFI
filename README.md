@@ -2,9 +2,9 @@
 
 Link to the paper: WILL BE ADDED SOON
 
+
 ## What is this?
-CAFI provides a Deep Learning-based temporal super-resolution for fast bioimaging. It increases the frame rate of any microscope modality by interpolating an image in between two consecutive images via “intelligent” interpolation, providing a 2x increase in temporal resolution.
-Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the CAFI 4 Microscopy Google Colab notebooks.
+Content-aware frame interpolation (CAFI) provides a Deep Learning-based temporal super-resolution for fast bioimaging. It increases the frame rate of any microscope modality by interpolating an image in between two consecutive images via “intelligent” interpolation, providing a 2x increase in temporal or/and axial resolution. Here we provide the modified repositories of DAIN and Zooming SlowMo used in the CAFI 4 Microscopy Google Colab notebooks.
 
 <table>
   <tr>
@@ -16,13 +16,14 @@ Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the
   </tr>
 </table>
 
-## Want to see a short video demonstration and tutorials?
+## Want to see a short video demonstration and user tutorials?
 
 | Demonstration Video | Tutorial Video CAFI (DAIN) | Tutorial Video CAFI (ZS) |
 |:-:|:-:|:-:|
 | [![](https://github.com/mpriessner/CAFI/blob/main/dump/Demo_Video_Screenshot.JPG)](https://www.youtube.com/watch?v=4eCELi-b23k) | [![](https://github.com/mpriessner/CAFI/blob/main/dump/DAIN_Screenshot.JPG)](https://youtu.be/RyMQuRYtpbM) | [![](https://github.com/mpriessner/CAFI/blob/main/dump/ZS_Screenshot_.JPG)](https://youtu.be/xymw0ZRF8Xo) |
 
-## Useful links and sources
+## Links to the notebooks and other sources
+
  DAIN 4 Microscopy:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing) | 
  
@@ -38,8 +39,14 @@ Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the
  [Source Paper 2](https://arxiv.org/abs/2104.07473#) 
 
 Microscopy training and test data is available here:
-[Zenodo Link](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
+[![DOI](https://zenodo.org/badge/5596603.svg)](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
 
+
+
+## How to cite this work
+Martin Priessner, David C.A Gaboriau, Arlo Sheridan, Tchern Lenn, Jonathan R. Chubb, Uri Manor, Ramon Vilar,
+and Romain F. Laine
+Publication To be added soon here.
 
 <table>
   <tr>
@@ -50,10 +57,3 @@ Microscopy training and test data is available here:
     </td>
   </tr>
 </table>
-
-
-
-## How to cite this work
-Martin Priessner, David C.A Gaboriau, Arlo Sheridan, Tchern Lenn, Jonathan R. Chubb, Uri Manor, Ramon Vilar,
-and Romain F. Laine
-Publication To be added soon here.
