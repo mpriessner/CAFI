@@ -1,6 +1,6 @@
 # Content-aware frame interpolation (CAFI): Deep Learning-based temporal super-resolution for fast bioimaging
 
-Link to the paper: WILL BE ADDED SOON
+Link to the paper: [link](https://biorxiv.org/cgi/content/short/2021.11.02.466664v1)
 
 
 ## What is this?
@@ -48,7 +48,7 @@ Martin Priessner, David C.A Gaboriau, Arlo Sheridan, Tchern Lenn, Jonathan R. Ch
 and Romain F. Laine
 
 **Content-aware frame interpolation (CAFI): Deep Learning-based temporal super-resolution for fast bioimaging. bioRxiv, 2021.** 
-DOI: [DOI](www.google.at)
+DOI: [Link](https://biorxiv.org/cgi/content/short/2021.11.02.466664v1)
 
 
 <table>
