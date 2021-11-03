@@ -46,7 +46,7 @@ Microscopy training and test data is available here:
 ## How to cite this work
 Martin Priessner, David C.A Gaboriau, Arlo Sheridan, Tchern Lenn, Jonathan R. Chubb, Uri Manor, Ramon Vilar,
 and Romain F. Laine
-Publication To be added soon here.
+
 **Content-aware frame interpolation (CAFI): Deep Learning-based temporal super-resolution for fast bioimaging. bioRxiv, 2021.** 
 DOI: [DOI](www.google.at)
 
