@@ -19,6 +19,9 @@ For more details see google colab notebooks:
 </table>
 
 
+| Demonstration Video | Tutorial Video CAFI (DAIN) | Tutorial Video CAFI (ZS) |
+|:-:|:-:|:-:|
+| [![](https://github.com/mpriessner/CAFI/blob/main/dump/Demo_Video_Screenshot.JPG)](https://youtu.be/TrDuidvO85s) | [![](https://github.com/mpriessner/CAFI/blob/main/dump/DAIN_Screenshot.JPG)](https://youtu.be/RyMQuRYtpbM) | [![](https://github.com/mpriessner/CAFI/blob/main/dump/ZS_Screenshot.JPG)](https://youtu.be/xymw0ZRF8Xo) |
 
 
  DAIN 4 Microscopy:
