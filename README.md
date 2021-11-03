@@ -19,7 +19,7 @@ For more details see google colab notebooks:
 
  DAIN 4 Microscopy:
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bL6wgTWrghHK7LH9xb4KGSk5WuOa5nJS?usp=sharing) | 
- [User Tutorial for DAIN4Mic](https://www.youtube.com/watch?v=5JF7y-cjmNc)
+ [User Tutorial for DAIN4Mic](https://youtu.be/RyMQuRYtpbM)
  
  [Original Github of DAIN](https://github.com/baowenbo/DAIN) | 
  [Source Paper 1](https://arxiv.org/abs/1904.00830)
@@ -27,7 +27,7 @@ For more details see google colab notebooks:
  
  ZoomingSlowMo 4 Microscopy
  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1TZ0K-rq9Nrgu9_XZ0UOK6brxjIM0ISNU?usp=sharing) | 
- [User Tutorial for ZoomingSlowMo4Mic](https://www.youtube.com/watch?v=yh6VH5_vN_Q)
+ [User Tutorial for ZoomingSlowMo4Mic](https://youtu.be/xymw0ZRF8Xo)
 
  [Original Github of ZS](https://github.com/Mukosame/Zooming-Slow-Mo-CVPR-2020) | 
  [Source Paper 1](https://arxiv.org/abs/2002.11616#) | 
