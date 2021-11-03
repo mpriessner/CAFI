@@ -53,7 +53,7 @@ Microscopy training and test data is available here:
 
 
 
-## Citation
-Please cite our work if you find it useful for your research: 
-
-To be added here
+## How to cite this work
+Martin Priessner, David C.A Gaboriau, Arlo Sheridan, Tchern Lenn, Jonathan R. Chubb, Uri Manor, Ramon Vilar,
+and Romain F. Laine
+Publication To be added soon here.
