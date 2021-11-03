@@ -6,6 +6,8 @@ Here we provide the modifide repositories of DAIN and Zooming SlowMo used in the
 
 For more details see google colab notebooks:
 
+## Want to see a short video demonstration?
+[![Click here for a full video]](https://youtu.be/TrDuidvO85s)
 <table>
   <tr>
     <td colspan="1">
@@ -16,8 +18,7 @@ For more details see google colab notebooks:
   </tr>
 </table>
 
-## Want to see a short video demonstration?
-[![]](https://youtu.be/TrDuidvO85s)
+
 
 
  DAIN 4 Microscopy:
