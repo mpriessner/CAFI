@@ -155,7 +155,18 @@ def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location
                   img = img[:,:,0] # otherwise there are 3 channels
 
                 img = img.astype('uint8')
+                
+                # add zero padding next to the image
+                import cv2 as cv
+                value = [0, 0, 0] # color black
+                zero_fill = max(img.shape)-min(img.shape)
+                x,y = img.shape
+                if x >y:
+                  img = cv.copyMakeBorder(img,0,0,0,zero_fill ,cv.BORDER_CONSTANT, None, value)
+                else:
+                  img = cv.copyMakeBorder(img,0,0,zero_fill,0,cv.BORDER_CONSTANT, None, value)
 
+                
                 if use_RGB:
                   temp_img_2D[counter_y*xy_dim:(counter_y+1)*xy_dim,counter_x*xy_dim:(counter_x+1)*xy_dim,:] = img
                 else:
