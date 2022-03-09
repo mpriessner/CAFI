@@ -60,8 +60,10 @@ def save_image(temp_img, folder_option, file_count, save_location_image, file_na
     io.imsave(save_location_image+f"/Z_{zoomfactor}x_{file_name}.tif", temp_img_final)
    
 
-def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location, multiplyer, product_image_shape, use_RGB):
+ def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location, multiplyer, product_image_shape, use_RGB):
     '''this function saves the the single images of each 4D file into one h5py file'''
+    import cv2 as cv
+
     zt_dim = len(zt_list)
     xy_dim = int(product_image_shape/multiplyer)
     h5py_safe_location_list = []
@@ -106,6 +108,15 @@ def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location
 
                 img = img.astype('uint8')
 
+                # add zero padding next to the image
+                value = [0, 0, 0] # color black
+                zero_fill = max(img.shape)-min(img.shape)
+                x,y = img.shape
+                if x >y:
+                  img = cv.copyMakeBorder(img,0,0,0,zero_fill ,cv.BORDER_CONSTANT, None, value)
+                else:
+                  img = cv.copyMakeBorder(img,0,0,zero_fill,0,cv.BORDER_CONSTANT, None, value)
+
                 if use_RGB:
                   temp_img_2D[counter_y*xy_dim:(counter_y+1)*xy_dim,counter_x*xy_dim:(counter_x+1)*xy_dim,:] = img
                 else:
@@ -122,4 +133,5 @@ def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location
           f.create_dataset(f"{name}", data=np.array(temp_img_3D, dtype=np.uint8))
 
     return h5py_safe_location_list
+
 
