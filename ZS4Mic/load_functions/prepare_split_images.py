@@ -55,7 +55,7 @@ def diplay_img_info(img, divisor, use_RGB):
     nr_z_slices = img.shape[1]
     nr_timepoints = img.shape[0]
     x_dim = img.shape[-2]
-    y_dim = img.shape[-2] 
+    y_dim = img.shape[-1] 
     x_div = x_dim//divisor
     y_div = y_dim//divisor
     print(img.shape)
