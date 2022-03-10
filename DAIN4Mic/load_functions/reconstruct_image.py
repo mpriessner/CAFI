@@ -161,10 +161,10 @@ def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location
                 value = [0, 0, 0] # color black
                 zero_fill = max(img.shape)-min(img.shape)
                 x,y = img.shape
-                if x >y:
+                if x > y:
                   img = cv.copyMakeBorder(img,0,0,0,zero_fill ,cv.BORDER_CONSTANT, None, value)
                 else:
-                  img = cv.copyMakeBorder(img,0,0,zero_fill,0,cv.BORDER_CONSTANT, None, value)
+                  img = cv.copyMakeBorder(img,0,zero_fill,0,0,cv.BORDER_CONSTANT, None, value)
 
                 
                 if use_RGB:
