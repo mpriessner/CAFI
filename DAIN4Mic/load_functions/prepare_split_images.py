@@ -94,11 +94,12 @@ def diplay_img_info(img, divisor, use_RGB):
     nr_z_slices = img.shape[1]
     nr_timepoints = img.shape[0]
     x_dim = img.shape[-2]
-    y_dim = img.shape[-2] 
+    y_dim = img.shape[-1] 
     x_div = x_dim//divisor
     y_div = y_dim//divisor
     print(img.shape)
-    print("The Resolution is: " + str(x_dim))
+    print("The Resolution x is: " + str(x_dim))
+    print("The Resolution y is: " + str(y_dim))
     print("The number of z-slizes is: " + str(nr_z_slices))
     print("The number of timepoints: " + str(nr_timepoints))
     if use_RGB:
