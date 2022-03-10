@@ -60,7 +60,7 @@ def save_image(temp_img, folder_option, file_count, save_location_image, file_na
     io.imsave(save_location_image+f"/Z_{zoomfactor}x_{file_name}.tif", temp_img_final)
    
 
- def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location, multiplyer, product_image_shape, use_RGB):
+def save_as_h5py(img_list, fraction_list, zt_list, file_nr, interpolate_location, multiplyer, product_image_shape, use_RGB):
     '''this function saves the the single images of each 4D file into one h5py file'''
     import cv2 as cv
 
