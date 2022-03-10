@@ -74,7 +74,7 @@ def make_folder_with_date(save_location, name):
 def create_3D_image(img, x_dim, y_dim):
   """creates 3D image with 3 times the same values for RGB because the NN was generated for normal rgb images dim(3,x,y)"""
   # print(img.shape)
-  image_3D = np.zeros((x_dim,y_dim,3))
+  image_3D = np.zeros((y_dim,x_dim,3))
   image_3D[:,:,0] = img
   image_3D[:,:,1] = img
   image_3D[:,:,2] = img
