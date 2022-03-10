@@ -111,8 +111,6 @@ def diplay_img_info(img, divisor, use_RGB):
     return nr_z_slices, nr_channels, nr_timepoints, x_dim, y_dim, x_div, y_div 
 
     
-
-
 def split_img_small(img_list, Source_path, divisor, split_img_folder_path, log_path_file):
     """This function splits the bigger image in to smaller batches and saves them with a structured name "img-xxx_fraction-xx" """
     for image_num in tqdm(range(len(img_list))):
@@ -121,8 +119,8 @@ def split_img_small(img_list, Source_path, divisor, split_img_folder_path, log_p
         nr_z_slices, nr_channels, nr_timepoints, x_dim, y_dim, x_div, y_div = diplay_img_info(img, divisor, use_RGB)
         multiplyer = x_dim/divisor
         os.chdir(split_img_folder_path)
-        for i in range(x_div):
-          for j in range(y_div):
+        for i in range(max(y_div,x_div)):
+          for j in range(max(y_div,x_div)):
             img_crop = img
             print(img.shape)
             if use_RGB==True:
