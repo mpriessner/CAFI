@@ -80,14 +80,6 @@ def create_3D_image(img, x_dim, y_dim):
   image_3D[:,:,2] = img
   return image_3D
 
-def convert(img, target_type_min, target_type_max, target_type):
-    """this function converts images from float32 to unit8 """
-    imin = img.min()
-    imax = img.max()
-    a = (target_type_max - target_type_min) / (imax - imin)
-    b = target_type_max - a * imax
-    new_img = (a * img + b).astype(target_type)
-    return new_img
 
 
 ''' the following funcitons prepare the dataset in a way that it form the necessary folder system for the NN to handle the data correctly'''
@@ -115,21 +107,16 @@ def upsample_z(img_path_list, file_num, sub_save_location):
           os.chdir(steps_path_folder)
 
           # #here put the image pngs into the folder (instead of creating the folder)
-          # #convert image to unit8 otherwise warning
           if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,z_num+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,z_num+1, :, :, :] 
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_2)
@@ -160,21 +147,16 @@ def upsample_t(img_path_list, file_num, sub_save_location):
           os.chdir(steps_path_folder)
 
           # #here put the image pngs into the folder (instead of creating the folder)
-          # #convert image to unit8 otherwise warning
           if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num+1,z_num, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num+1,z_num, :, :, :] 
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_2)
@@ -213,30 +195,23 @@ def perform_prep_predict_z_creation(img_path_list, file_num,  sub_save_location)
           os.chdir(steps_path_folder)
 
           #here put the image pngs into the folder (instead of creating the folder)
-          #convert image to unit8 otherwise warning
           first = z_num* images_jump
           second = z_num*images_jump+images_jump
           if use_RGB == False:
             img_save_1 = img[t_num,first, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[t_num,second, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,first+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,first, :, :, :] 
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[t_num,second, :, :, :] 
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,first+1, :, :, :] 
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_3)
@@ -277,30 +252,23 @@ def perform_prep_predict_t_creation(img_path_list, file_num,  sub_save_location,
           os.chdir(steps_path_folder)
 
           #here put the image pngs into the folder (instead of creating the folder)
-          #convert image to unit8 otherwise warning
           first = t_num* images_jump
           second = t_num*images_jump+images_jump
           if use_RGB == False:
             img_save_1 = img[first,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[second,z_num, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[first+1,z_num, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[first,z_num, :, :, :] 
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[second,z_num, :, :, :] 
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[first+1,z_num, :, :, :] 
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_3)
@@ -344,24 +312,17 @@ def prepare_t_train_data(img_path_list, file_num,  sub_save_location, split_trai
           txt_file_test.write("{}/{}\n".format(file_folder,slice_folder))
           txt_file_test.close()
           
-        #converting images in rgb and uint8 to save it like that
         if use_RGB == False:
           img_save_1 = img[t_num,z_num, :, :] 
           img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-          # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           img_save_2 = img[t_num+1,z_num, :, :] 
           img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-          # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           img_save_3 = img[t_num+2,z_num, :, :] 
           img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-          # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         if use_RGB == True:
           img_save_1 = img[t_num,z_num, :, :, :] 
-          # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           img_save_2 = img[t_num+1,z_num, :, :, :] 
-          # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           img_save_3 = img[t_num+2,z_num, :, :, :] 
-          # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         # saving images as PNG
         io.imsave("{}.png".format("im1"), img_save_1)
         io.imsave("{}.png".format("im2"), img_save_2)
@@ -403,24 +364,17 @@ def prepare_z_train_data(img_path_list, file_num,  sub_save_location, split_trai
           txt_file_test.write("{}/{}\n".format(file_folder,slice_folder))
           txt_file_test.close()
           
-        #converting images in rgb and uint8 to save it like that
         if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             img_save_2 = img[t_num,z_num+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
             img_save_3 = img[t_num,z_num+2, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             img_save_2 = img[t_num,z_num+1, :, :, :] 
-            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
             img_save_3 = img[t_num,z_num+2, :, :, :] 
-            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         # saving images as PNG
         io.imsave("{}.png".format("im1"), img_save_1)
         io.imsave("{}.png".format("im2"), img_save_2)
