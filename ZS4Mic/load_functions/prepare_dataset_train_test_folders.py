@@ -41,10 +41,8 @@ def downsample_z_creation(img_path_list, file_num, sub_save_location):
             if use_RGB == False:
               img_save_1 = img[num_t,num_z, :, :] 
               img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             elif use_RGB == True:
               img_save_1 = img[num_t,num_z, :, :, :] 
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
               # # saving images as PNG
               io.imsave("{}.png".format(file_name), img_save_1)
               # writer1.save(img_save_1)
@@ -54,14 +52,11 @@ def downsample_z_creation(img_path_list, file_num, sub_save_location):
             file_name = ("z_%03d" %(num_z))
 
             # #here put the image pngs into the folder (instead of creating the folder)
-            # #convert image to unit8 otherwise warning 
             if use_RGB == False:
               img_save_1 = img[num_t,num_z, :, :] 
               img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             elif use_RGB == True:
               img_save_1 = img[num_t,num_z, :, :, :] 
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)              
             # # saving images as PNG
             io.imsave("{}-x.png".format(file_name), img_save_1)
 
@@ -87,14 +82,11 @@ def downsample_t_creation(img_path_list, file_num, sub_save_location):
             file_name = ("t_%03d" %(num_t))
 
             # #here put the image pngs into the folder (instead of creating the folder)
-            # #convert image to unit8 otherwise warning
             if use_RGB == False:
               img_save_1 = img[num_t,num_z, :, :] 
               img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             elif use_RGB == True:
               img_save_1 = img[num_t,num_z, :, :, :] 
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
               # # saving images as PNG
             io.imsave("{}.png".format(file_name), img_save_1)
 
@@ -104,13 +96,10 @@ def downsample_t_creation(img_path_list, file_num, sub_save_location):
 
             if use_RGB == False:
               # #here put the image pngs into the folder (instead of creating the folder)
-              # #convert image to unit8 otherwise warning
               img_save_1 = img[num_t,num_z, :, :] 
               img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             elif use_RGB == True:
               img_save_1 = img[num_t,num_z, :, :, :] 
-              img_save_1 = convert(img_save_1, 0, 255, np.uint8)
               # # saving images as PNG
             io.imsave("{}-x.png".format(file_name), img_save_1)
 
@@ -135,15 +124,12 @@ def upsample_t_creation(img_path_list, file_num, sub_save_location):
           file_name = ("t_%03d" %(num_t))
 
           # #here put the image pngs into the folder (instead of creating the folder)
-          # #convert image to unit8 otherwise warning
 
           if use_RGB == False:
             img_save_1 = img[num_t,num_z, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           elif use_RGB == True:
             img_save_1 = img[num_t,num_z, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             # # saving images as PNG
           io.imsave("{}.png".format(file_name), img_save_1)
             # writer1.save(img_save_1)
@@ -170,15 +156,12 @@ def upsample_z_creation(img_path_list, file_num, sub_save_location):
         for num_z in range(z):
           #create new directory-path
           file_name = ("z_%03d"%(num_z))
-          # #convert image to unit8 otherwise warning
 
           if use_RGB == False:
             img_save_1 = img[num_t,num_z, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           elif use_RGB == True:
             img_save_1 = img[num_t,num_z, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             # # saving images as PNG
           io.imsave("{}.png".format(file_name), img_save_1)
 
@@ -222,19 +205,11 @@ def make_folder_with_date(save_location, name):
 def create_3D_image(img, x_dim, y_dim):
 # creates 3D image with 3 times the same values for RGB because the NN was generated for normal rgb images dim(3,x,y)
   # print(img.shape)
-  image_3D = np.zeros((x_dim,y_dim,3))
+  image_3D = np.zeros((x_dim,y_dim,3), dtype = np.uint8)
   image_3D[:,:,0] = img
   image_3D[:,:,1] = img
   image_3D[:,:,2] = img
   return image_3D
 
 
-def convert(img, target_type_min, target_type_max, target_type):
-  # this function converts images from float32 to unit8 
-    imin = img.min()
-    imax = img.max()
-    a = (target_type_max - target_type_min) / (imax - imin)
-    b = target_type_max - a * imax
-    new_img = (a * img + b).astype(target_type)
-    return new_img
 
