@@ -74,7 +74,7 @@ def make_folder_with_date(save_location, name):
 def create_3D_image(img, x_dim, y_dim):
   """creates 3D image with 3 times the same values for RGB because the NN was generated for normal rgb images dim(3,x,y)"""
   # print(img.shape)
-  image_3D = np.zeros((y_dim,x_dim,3))
+  image_3D = np.zeros((y_dim,x_dim,3), dtype = np.uint8)
   image_3D[:,:,0] = img
   image_3D[:,:,1] = img
   image_3D[:,:,2] = img
@@ -119,17 +119,17 @@ def upsample_z(img_path_list, file_num, sub_save_location):
           if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,z_num+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,z_num+1, :, :, :] 
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_2)
@@ -164,17 +164,17 @@ def upsample_t(img_path_list, file_num, sub_save_location):
           if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num+1,z_num, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_2 = img[t_num+1,z_num, :, :, :] 
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_2)
@@ -219,24 +219,24 @@ def perform_prep_predict_z_creation(img_path_list, file_num,  sub_save_location)
           if use_RGB == False:
             img_save_1 = img[t_num,first, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[t_num,second, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,first+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[t_num,first, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[t_num,second, :, :, :] 
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[t_num,first+1, :, :, :] 
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_3)
@@ -283,24 +283,24 @@ def perform_prep_predict_t_creation(img_path_list, file_num,  sub_save_location,
           if use_RGB == False:
             img_save_1 = img[first,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[second,z_num, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[first+1,z_num, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           if use_RGB == True:
             img_save_1 = img[first,z_num, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
 
             img_save_3 = img[second,z_num, :, :, :] 
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
 
             img_save_2 = img[first+1,z_num, :, :, :] 
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           # saving images as PNG
           io.imsave("{}.png".format("im1"), img_save_1)
           io.imsave("{}.png".format("im3"), img_save_3)
@@ -348,20 +348,20 @@ def prepare_t_train_data(img_path_list, file_num,  sub_save_location, split_trai
         if use_RGB == False:
           img_save_1 = img[t_num,z_num, :, :] 
           img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-          img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+          # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           img_save_2 = img[t_num+1,z_num, :, :] 
           img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-          img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+          # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           img_save_3 = img[t_num+2,z_num, :, :] 
           img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-          img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+          # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         if use_RGB == True:
           img_save_1 = img[t_num,z_num, :, :, :] 
-          img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+          # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
           img_save_2 = img[t_num+1,z_num, :, :, :] 
-          img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+          # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
           img_save_3 = img[t_num+2,z_num, :, :, :] 
-          img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+          # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         # saving images as PNG
         io.imsave("{}.png".format("im1"), img_save_1)
         io.imsave("{}.png".format("im2"), img_save_2)
@@ -407,20 +407,20 @@ def prepare_z_train_data(img_path_list, file_num,  sub_save_location, split_trai
         if use_RGB == False:
             img_save_1 = img[t_num,z_num, :, :] 
             img_save_1 = create_3D_image(img_save_1, x_dim, y_dim)
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             img_save_2 = img[t_num,z_num+1, :, :] 
             img_save_2 = create_3D_image(img_save_2, x_dim, y_dim)
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
             img_save_3 = img[t_num,z_num+2, :, :] 
             img_save_3 = create_3D_image(img_save_3, x_dim, y_dim)
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         if use_RGB == True:
             img_save_1 = img[t_num,z_num, :, :, :] 
-            img_save_1 = convert(img_save_1, 0, 255, np.uint8)
+            # img_save_1 = convert(img_save_1, 0, 255, np.uint8)
             img_save_2 = img[t_num,z_num+1, :, :, :] 
-            img_save_2 = convert(img_save_2, 0, 255, np.uint8)
+            # img_save_2 = convert(img_save_2, 0, 255, np.uint8)
             img_save_3 = img[t_num,z_num+2, :, :, :] 
-            img_save_3 = convert(img_save_3, 0, 255, np.uint8)
+            # img_save_3 = convert(img_save_3, 0, 255, np.uint8)
         # saving images as PNG
         io.imsave("{}.png".format("im1"), img_save_1)
         io.imsave("{}.png".format("im2"), img_save_2)
