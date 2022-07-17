@@ -303,7 +303,7 @@ def prepare_t_train_data(img_path_list, file_num,  sub_save_location, split_trai
         os.chdir(three_t_folder)
         #add new folder to txt-file
         decision_train_test = random.random()
-        if decision_train_test < split_training_test:
+        if decision_train_test > split_training_test:
           txt_file_train = open(sub_save_location + "/tri_trainlist.txt", "a")
           txt_file_train.write("{}/{}\n".format(file_folder,slice_folder))
           txt_file_train.close()
@@ -355,7 +355,7 @@ def prepare_z_train_data(img_path_list, file_num,  sub_save_location, split_trai
         os.chdir(three_z_folder)
         #add new folder to txt-file
         decision_train_test = random.random()
-        if decision_train_test < split_training_test:
+        if decision_train_test > split_training_test:
           txt_file_train = open(sub_save_location + "/tri_trainlist.txt", "a")
           txt_file_train.write("{}/{}\n".format(file_folder,slice_folder))
           txt_file_train.close()
