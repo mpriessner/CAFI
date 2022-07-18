@@ -172,13 +172,13 @@ def train():
             total_loss.backward()
             optimizer.step()
 
-        if t == 1:
-            # delete the pre validation weights for cleaner workspace
-            if os.path.exists(args.save_path + "/epoch" + str(0) +".pth" ):
-                os.remove(args.save_path + "/epoch" + str(0) +".pth")
+#         if t == 1:
+#             # delete the pre validation weights for cleaner workspace
+#             if os.path.exists(args.save_path + "/epoch" + str(0) +".pth" ):
+#                 os.remove(args.save_path + "/epoch" + str(0) +".pth")
 
-        if os.path.exists(args.save_path + "/epoch" + str(t-1) +".pth"):
-            os.remove(args.save_path + "/epoch" + str(t-1) +".pth")
+#         if os.path.exists(args.save_path + "/epoch" + str(t-1) +".pth"):
+#             os.remove(args.save_path + "/epoch" + str(t-1) +".pth")
         torch.save(model.state_dict(), args.save_path + "/epoch" + str(t) +".pth")
 
         # print("\t\t**************Start Validation*****************")
