@@ -39,8 +39,7 @@ Content-aware frame interpolation (CAFI) provides a Deep Learning-based temporal
  [Source Paper 2](https://arxiv.org/abs/2104.07473#) 
 
 Microscopy training and test data is available here:
-[![DOI](dump/zenodo.5596603.svg)](https://zenodo.org/record/5596603#.YX-bKGDMIdU)
-
+[![DOI](dump/zenodo.5596603.svg)](https://zenodo.org/record/7396563)
 
 
 ## How to cite this work
